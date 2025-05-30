@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Topo() {
-  const imagemInicial = "https://i.pinimg.com/736x/40/1f/47/401f47f4ab436ce9a78cf6ade9fbc8d7.jpg";
+  const imagemInicial = "https://wallpapers.com/images/hd/smiling-bloody-trafalgar-law-one-piece-fanart-44bsvjb9q10npjlr.jpg";
 
   const [nome, setNome] = React.useState("");
   const [avatar, setAvatar] = React.useState(imagemInicial);
