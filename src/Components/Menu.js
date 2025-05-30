@@ -21,13 +21,14 @@ export default function Menu() {
 
   return (
     <ul className="menu">
-      {menu.map((m) => 
+      {menu.map((m, index) => (
         <MenuItems
           texto={m.texto}
           link={m.link}
           imagem={m.imagem}
+          key={index}
         ></MenuItems>
-      )}
+      ))}
     </ul>
   );
 }
