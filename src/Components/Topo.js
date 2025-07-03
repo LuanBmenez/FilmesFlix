@@ -1,11 +1,11 @@
-import React from "react";
+import { useState } from "react";
 
-export default function Topo() {
+function Topo() {
   const imagemInicial =
     "https://wallpapers.com/images/hd/smiling-bloody-trafalgar-law-one-piece-fanart-44bsvjb9q10npjlr.jpg";
 
-  const [nome, setNome] = React.useState("");
-  const [avatar, setAvatar] = React.useState(imagemInicial);
+  const [nome, setNome] = useState("");
+  const [avatar, setAvatar] = useState(imagemInicial);
 
   function InserirNome() {
     const nomeDigitado = prompt("Qual o seu nome?");
@@ -19,13 +19,18 @@ export default function Topo() {
   return (
     <div className="topo">
       <h1>FilmesFlix</h1>
+
       <div>
         <button onClick={InserirNome}>Inserir nome</button>
+
         <p>
           {!nome ? "Seja bem vindo(a) ao site!" : `Seja bem vindo(a), ${nome}!`}
         </p>
-        <img onClick={mudaAvatar} src={avatar} />
+
+        <img onClick={mudaAvatar} src={avatar} alt="imagem" />
       </div>
     </div>
   );
 }
+
+export default Topo;

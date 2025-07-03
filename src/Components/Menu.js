@@ -33,11 +33,11 @@ export default function Menu() {
   );
 }
 
-function MenuItems(props) {
+function MenuItems({texto, link, imagem, key}) {
   return (
     <li>
-      <img src={props.imagem} />
-      <a href={props.link}>{props.texto}</a>
+      <img src={imagem} alt="imagem"/>
+      <a href={link}>{texto}</a>
     </li>
   );
 }

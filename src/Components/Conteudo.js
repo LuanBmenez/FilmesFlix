@@ -1,3 +1,13 @@
+function Filme({imagem, nome}) {
+  return (
+    <li className="filme">
+      <img src={imagem} alt="imagem"/>
+      <p>{nome}</p>
+    </li>
+  );
+}
+
+
 export default function Conteudo() {
   const filmes = [
     {
@@ -57,6 +67,8 @@ export default function Conteudo() {
     },
   ];
 
+
+  
   return (
     <ul className="conteudo">
       {filmes.map((filme, index) => (
@@ -66,11 +78,3 @@ export default function Conteudo() {
   );
 }
 
-function Filme(props) {
-  return (
-    <li className="filme">
-      <img src={props.imagem} />
-      <p>{props.nome}</p>
-    </li>
-  );
-}
